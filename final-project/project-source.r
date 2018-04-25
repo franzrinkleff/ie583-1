@@ -128,7 +128,7 @@ for(f in 1:cvCount){
 mean(train.accuracy.estimate.rf)
 mean(fold.accuracy.estimate.rf)
 
-# Attempt 2) Decision Tree with Undersampling
+# Attempt 2) Decision Tree with SMOTE
 cvCount = 5
 ctrl_cv = trainControl(method = "cv", number = cvCount, savePred = T, classProb = T, sampling="smote")
 cols = ncol(projTrainFS)
@@ -148,7 +148,7 @@ for(f in 1:cvCount){
 mean(train.accuracy.estimate.j48)
 mean(fold.accuracy.estimate.j48)
 
-# Attempt 3) naiveBayes with Oversampling
+# Attempt 3) naiveBayes with SMOTE
 cvCount = 5
 ctrl_cv = trainControl(method = "cv", number = cvCount, savePred = T, classProb = T, sampling="smote")
 cols = ncol(projTrainFS)
